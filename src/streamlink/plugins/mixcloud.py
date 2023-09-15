@@ -22,7 +22,7 @@ log = logging.getLogger(__name__)
 class Mixcloud(Plugin):
     def _get_streams(self):
         data = self.session.http.post(
-            "https://www.mixcloud.com/graphql",
+            "https://app.mixcloud.com/graphql",
             json={
                 "query": """
                     query streamData($user: UserLookup!) {
